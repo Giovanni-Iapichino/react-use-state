@@ -18,6 +18,7 @@ export default function App() {
             <ButtonLanguages
               key={lang.id}
               lang={lang}
+              isSelected={selectedLang.id === lang.id}
               onClick={() => setSelectedLang(lang)}
             />
           ))}
