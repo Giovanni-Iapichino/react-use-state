@@ -27,10 +27,10 @@ export default function App() {
           ))}
         </div>
 
-        <div class="card ms-3 mt-3">
-          <div class="card-body">
-            <h5 class="card-title">{selectedLang.title}</h5>
-            <p class="card-text">{selectedLang.description}</p>
+        <div className="card ms-3 mt-3">
+          <div className="card-body">
+            <h5 className="card-title">{selectedLang.title}</h5>
+            <p className="card-text">{selectedLang.description}</p>
           </div>
         </div>
       </div>
