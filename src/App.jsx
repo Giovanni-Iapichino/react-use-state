@@ -1,7 +1,5 @@
-// LAYOUT COMPONENTS
-import Footer from "./components/Footer";
-import Main from "./components/Main";
-import Header from "./components/Header";
+import CardLanguages from "./components/cardLanguages";
+import ButtonLanguages from "./components/ButtonLanguages";
 
 // DATA COMPONENTS
 import languages from "./data/languages";
@@ -17,22 +15,15 @@ export default function App() {
       <div className="container">
         <div className="d-flex gap-4 p-3 mt-5">
           {languages.map((lang) => (
-            <button
+            <ButtonLanguages
               key={lang.id}
-              className={`btn btn-primary`}
+              lang={lang}
               onClick={() => setSelectedLang(lang)}
-            >
-              {lang.title}
-            </button>
+            />
           ))}
         </div>
 
-        <div className="card ms-3 mt-3">
-          <div className="card-body">
-            <h5 className="card-title">{selectedLang.title}</h5>
-            <p className="card-text">{selectedLang.description}</p>
-          </div>
-        </div>
+        <CardLanguages selectedLang={selectedLang} />
       </div>
     </>
   );
